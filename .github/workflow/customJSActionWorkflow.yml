@@ -1,0 +1,14 @@
+name: My JS Workflow
+
+on: [push]
+
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout-code
+        uses: actions/checkout@v2
+      - name: Run my JS action
+        uses: ./github/actions/my-js-action
+        with:
+          myInput: "Hello, World!"
